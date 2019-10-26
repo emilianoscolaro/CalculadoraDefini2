@@ -16,8 +16,7 @@ namespace CalculadoraDefini
         
     {
         double a ;
-        
-        double resultado ;
+        double b;
         string operacion;
         string resultadostring;
         public MainPage()
@@ -27,7 +26,7 @@ namespace CalculadoraDefini
         private void Button_Clicked(object sender, EventArgs e)
         {
             Button button = sender as Button;
-            resultadostring = Convert.ToString(resultado);
+            resultadostring = Convert.ToString(b);
             if(mantisa.Text==resultadostring)
                 mantisa.Text = "";
             if (mantisa.Text == "0" )
@@ -37,65 +36,40 @@ namespace CalculadoraDefini
             mantisa.Text = mantisa.Text + button.Text;
             mantisa2.Text = mantisa2.Text + button.Text;
         }
-        private void Button_Clicked_2(object sender, EventArgs e)
+        private void Button_Clicked_C(object sender, EventArgs e)
         {
             mantisa.Text = "0";
             mantisa2.Text = "0";
             a = 0;
-            resultado = 0;
-            operacion = "";
+            operacion = null;
+            b = 0;
         }
-
         private void Button_Clicked_operacion(object sender, EventArgs e) 
         {
             Button button = sender as Button;
             a = Convert.ToDouble(mantisa.Text);
 
-            if(operacion =="+" || operacion == "-")
+            if (operacion == "+")
             {
-                if (operacion == "+")
-                {
-                    mantisa2.Text = mantisa2.Text + button.Text;
-                    resultado = resultado + a;
-                }
-                    
-
-                if (operacion == "-")
-                {
-                    resultado = resultado - a;
-                    mantisa2.Text = mantisa2.Text + button.Text;
-                }
-                    
-
+                b = b + a;
             }
-            else
+            if (operacion == "-")
             {
-                if (button.Text == "+")
-                {
-                    operacion = "+";
-                    resultado = a;
-                    mantisa2.Text = mantisa2.Text + button.Text;
-                }
-
-                if (button.Text == "-")
-                {
-                    operacion = "-";
-                    resultado = a;
-                    mantisa2.Text = mantisa2.Text + button.Text;
-                }
+                b = b - a;
             }
-                
-
-
-            
-
-
-
-            mantisa.Text = Convert.ToString(resultado);
-
-
+            if (operacion == "*")
+                b = b * a;
+            if (operacion == "/")
+                b = b / a;
+            if (operacion == null)
+            {   
+                b = a;
+            }
+            operacion = button.Text;
+            mantisa2.Text =  mantisa2.Text + button.Text;
+            mantisa.Text = Convert.ToString(b);
+            resultadostring= Convert.ToString(b); 
         }
-
 
         private void Button_Clicked_igual(object sender, EventArgs e)
         {
@@ -103,47 +77,22 @@ namespace CalculadoraDefini
             a = Convert.ToDouble(mantisa.Text);
             if (operacion == "+")
             {
-                resultado = a + resultado;
+                b = b+a;
             }
             if (operacion == "-")
             {
-                resultado = resultado - a;
+                b = b - a;
             }
             if (operacion == "*")
             {
-                resultado = a * resultado;
+                b = b*a;
             }
             if (operacion == "/")
             {
-                resultado = a / resultado;
+                b = b/a;
             }
-            mantisa.Text = Convert.ToString(resultado);
-            mantisa2.Text = "";
-                
-                
-        }
-    }
-
-    public class Calculadora
-    {
-        float mantisa;
-        string operacion;
-
-
-        public void Mas()
-        {
-            operacion = "+";
-        }
-        public void Menos()
-        {
-            operacion = "-";
-        }
-        public void Igual()
-        {
-        }
-        public float GetResultado()
-        {
-            return mantisa;
+            mantisa.Text = Convert.ToString(b);
+            mantisa2.Text = ""; 
         }
     }
 
