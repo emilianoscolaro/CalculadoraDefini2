@@ -8,7 +8,8 @@
              BackgroundColor="Black">
     <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
         <Grid.RowDefinitions>
-            <RowDefinition Height="150" />
+            <RowDefinition Height="75" />
+            <RowDefinition Height="75" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -23,75 +24,75 @@
         </Grid.ColumnDefinitions>
         
         
-        <Button Text = "C" Grid.Row="1" Grid.Column="0" FontSize="40"
+        <Button Text = "C" Grid.Row="2" Grid.Column="0" FontSize="40"
                 Clicked="Button_Clicked_C"
             Grid.ColumnSpan="2"   
             BackgroundColor="Orange"/>
         <Button Text = "0" Grid.ColumnSpan="2" FontSize="35"
-        Grid.Row="5" Grid.Column="0" Clicked="Button_Clicked"             
+        Grid.Row="6" Grid.Column="0" Clicked="Button_Clicked"             
 
             BackgroundColor="White"/>
         <Button  BackgroundColor="White" FontSize="35"
-            Text = "1" Grid.Row="4" Grid.Column="0"
+            Text = "1" Grid.Row="5" Grid.Column="0"
            Clicked="Button_Clicked"     />
-        <Button Text = "2" Grid.Row="4" Grid.Column="1"  FontSize="30"
+        <Button Text = "2" Grid.Row="5" Grid.Column="1"  FontSize="30"
            Clicked="Button_Clicked"             
             BackgroundColor="White"   />
-        <Button Text = "3" Grid.Row="4" Grid.Column="2" FontSize="30"
+        <Button Text = "3" Grid.Row="5" Grid.Column="2" FontSize="30"
             Clicked="Button_Clicked"            
             BackgroundColor="White"   />
-        <Button Text = "4" Grid.Row="3" Grid.Column="0" FontSize="30"
+        <Button Text = "4" Grid.Row="4" Grid.Column="0" FontSize="30"
            Clicked="Button_Clicked"               
             BackgroundColor="White"  />
-        <Button Text = "5" Grid.Row="3" Grid.Column="1" FontSize="30"
+        <Button Text = "5" Grid.Row="4" Grid.Column="1" FontSize="30"
             Clicked="Button_Clicked"             
             BackgroundColor="White"   />
-        <Button Text = "6" Grid.Row="3" Grid.Column="2" FontSize="30"
+        <Button Text = "6" Grid.Row="4" Grid.Column="2" FontSize="30"
             Clicked="Button_Clicked"            
             BackgroundColor="White"   />
-        <Button Text = "7" Grid.Row="2" Grid.Column="0" FontSize="30"
+        <Button Text = "7" Grid.Row="3" Grid.Column="0" FontSize="30"
              Clicked="Button_Clicked"             
             BackgroundColor="White"  />
-        <Button Text = "8" Grid.Row="2" Grid.Column="1" FontSize="30"
+        <Button Text = "8" Grid.Row="3" Grid.Column="1" FontSize="30"
            Clicked="Button_Clicked"           
             BackgroundColor="White"    />
-        <Button Text = "9" Grid.Row="2" Grid.Column="2" FontSize="30"
+        <Button Text = "9" Grid.Row="3" Grid.Column="2" FontSize="30"
            Clicked="Button_Clicked"          
             BackgroundColor="White"    />
-        <Button Text = "," Grid.Row="5" Grid.Column="2" FontSize="30"
+        <Button Text = "," Grid.Row="6" Grid.Column="2" FontSize="30"
                   Clicked="Button_Clicked"      
             BackgroundColor="White" 
                 />
 
 
-        <Button Text = "-" Grid.Row="4" Grid.Column="3" FontSize="35"
+        <Button Text = "-" Grid.Row="5" Grid.Column="3" FontSize="35"
                       
             BackgroundColor="Orange"   
                 Clicked="Button_Clicked_operacion"/>
 
-        <Button Text = "+" Grid.Row="2" Grid.Column="3" FontSize="35"
+        <Button Text = "+" Grid.Row="3" Grid.Column="3" FontSize="35"
             Grid.RowSpan="2"             
             BackgroundColor="Orange" 
                 Clicked="Button_Clicked_operacion"/>
 
-        <Button Text = "/" Grid.Row="1" Grid.Column="2" FontSize="35"
+        <Button Text = "/" Grid.Row="2" Grid.Column="2" FontSize="35"
            
             BackgroundColor="Orange"  
                 Clicked="Button_Clicked_operacion"/>
 
-        <Button Text = "*" Grid.Row="1" Grid.Column="3" FontSize="35"
+        <Button Text = "*" Grid.Row="2" Grid.Column="3" FontSize="35"
     
             BackgroundColor="Orange"  
                 Clicked="Button_Clicked_operacion"/>
 
 
-        <Button Text = "=" Grid.Row="5" Grid.Column="3" FontSize="35"
+        <Button Text = "=" Grid.Row="6" Grid.Column="3" FontSize="35"
 
             BackgroundColor="Orange"  
                 Clicked="Button_Clicked_igual"/>
 
 
-        <Label Grid.Row="0"
+        <Label Grid.Row="1"
                MaxLines="1" 
                Text="0"
                TextColor="White"
@@ -99,7 +100,7 @@
                Grid.Column="0"
                x:Name="mantisa" 
                Grid.ColumnSpan="4"
-               HorizontalTextAlignment="End" VerticalTextAlignment="End"
+               HorizontalTextAlignment="End" VerticalTextAlignment="Start"
                />
 
         <Label Grid.Row="0"
